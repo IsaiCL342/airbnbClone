@@ -1,24 +1,27 @@
-// Obtiene todas las reservas del localStorage
-export const getReservas = () => {
-    const data = localStorage.getItem("reservas");
-    return data ? JSON.parse(data) : [];
-};
+    export const getReservas = () => {
+        const data = localStorage.getItem("reservas");
+        return data ? JSON.parse(data) : [];
+    };
 
-// Guarda una nueva reserva
-export const guardarReserva = (reserva) => {
-    const reservas = getReservas();
-    reservas.push(reserva);
-    localStorage.setItem("reservas", JSON.stringify(reservas));
-};
+    export const getReservasPorUsuario = (email) => {
+        return getReservas().filter((r) => r.usuario === email);
+    };
 
-// Obtiene las reservas de un usuario específico
-export const getReservasPorUsuario = (email) => {
-    return getReservas().filter((r) => r.usuario === email);
-};
+    export const guardarReserva = (reserva) => {
+        const reservas = getReservas();
+        reservas.push(reserva);
+        localStorage.setItem("reservas", JSON.stringify(reservas));
+    };
 
-//Cancela reserva
-export const cancelarReserva = (index, email) => {
-    const reservas = getReservas();
-    const nuevas = reservas.filter((r, i) => !(i === index && r.usuario === email));
+    export const cancelarReserva = (reservaCancelada) => {
+        const reservas = getReservas();
+        const nuevas = reservas.filter(
+            (r) =>
+            !(
+                r.usuario === reservaCancelada.usuario &&
+                r.alojamiento === reservaCancelada.alojamiento &&
+                r.fecha === reservaCancelada.fecha
+            )
+        );
     localStorage.setItem("reservas", JSON.stringify(nuevas));
 };

@@ -1,7 +1,6 @@
 import { getUser } from "../utils/auth";
-import { getReservasPorUsuario } from "../utils/reservas";
 import { useEffect, useState } from "react";
-import { cancelarReserva } from "../utils/reservas";
+import { getReservasPorUsuario, cancelarReserva } from "../utils/reservas";
 
 const Reservas = () => {
     const [reservas, setReservas] = useState([]);
@@ -13,6 +12,20 @@ const Reservas = () => {
         setReservas(misReservas);
         }
     }, []);
+
+    const cancelarReserva = (reservaCancelada) => {
+        const data = localStorage.getItem("reservas");
+        const reservas = data ? JSON.parse(data) : [];
+        const nuevas = reservas.filter(
+            (r) =>
+            !(
+                r.usuario === reservaCancelada.usuario &&
+                r.alojamiento === reservaCancelada.alojamiento &&
+                r.fecha === reservaCancelada.fecha
+            )
+        );
+        localStorage.setItem("reservas", JSON.stringify(nuevas));
+    };
 
     return (
         <div className="max-w-2xl mx-auto mt-10 p-6 p-6 bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen transition-colors">
@@ -29,8 +42,9 @@ const Reservas = () => {
                     <p className="text-sm text-gray-500">Reservado el {new Date(reserva.fecha).toLocaleString()}</p>
                     <button
                     onClick={() => {
-                        cancelarReserva(index, getUser().email);
-                        setReservas(getReservasPorUsuario(getUser().email));
+                        const usuario = getUser();
+                        cancelarReserva({ ...reserva, usuario: usuario.email });
+                        setReservas(getReservasPorUsuario(usuario.email));
                     }}
                     className="mt-2 text-red-600 hover:underline text-sm"
                     >
