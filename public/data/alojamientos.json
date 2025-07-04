@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "titulo": "Departamento moderno en CDMX",
+        "ubicacion": "Roma Norte, Ciudad de México",
+        "precio": 750,
+        "imagen": "/src/assets/roma.jpg",
+        "descripcion": "Moderno, céntrico y con balcón privado.",
+        "favorito": true,
+        "calificacion": 4.87
+    },
+    {
+        "id": 2,
+        "titulo": "Cabaña en el bosque",
+        "ubicacion": "Valle de Bravo",
+        "precio": 1200,
+        "imagen": "/src/assets/cabana.jpg",
+        "descripcion": "Relájate en una cabaña rústica entre los árboles.",
+        "favorito": true,
+        "calificacion": 3.52
+    },
+    {
+        "id": 3,
+        "titulo": "Casa colonial",
+        "ubicacion": "San Miguel de Allende",
+        "precio": 950,
+        "imagen": "/src/assets/colonial.jpg",
+        "descripcion": "Casa amplia con decoración tradicional y terraza.",
+        "favorito": false,
+        "calificacion": 5
+    },
+    {
+        "id": 4,
+        "titulo": "Cabaña rústica en Valle de Bravo",
+        "ubicacion": "Valle de Bravo, Estado de México",
+        "precio": 980,
+        "imagen": "/src/assets/valle.webp",
+        "descripcion": "Relájate en una cabaña rodeada de bosque y aire fresco.",
+        "favorito": false,
+        "calificacion": 4.72
+    },
+    {
+        "id": 5,
+        "titulo": "Loft industrial en Guadalajara",
+        "ubicacion": "Colonia Americana, Guadalajara",
+        "precio": 1050,
+        "imagen": "/src/assets/guadalajara.webp",
+        "descripcion": "Loft con diseño moderno, ideal para escapadas urbanas.",
+        "favorito": true,
+        "calificacion": 4.91
+    },
+    {
+        "id": 6,
+        "titulo": "Casa colonial en Mérida",
+        "ubicacion": "Centro Histórico, Mérida",
+        "precio": 890,
+        "imagen": "/src/assets/merida.webp",
+        "descripcion": "Casa con patio interior y arquitectura tradicional.",
+        "favorito": false,
+        "calificacion": 4.65
+    },
+    {
+        "id": 7,
+        "titulo": "Estudio con vista al mar",
+        "ubicacion": "Puerto Escondido, Oaxaca",
+        "precio": 1200,
+        "imagen": "/src/assets/puerto.avif",
+        "descripcion": "Despierta con el sonido del mar y una vista increíble.",
+        "favorito": true,
+        "calificacion": 4.93
+    },
+    {
+        "id": 8,
+        "titulo": "Glamping en San Cristóbal",
+        "ubicacion": "San Cristóbal de las Casas, Chiapas",
+        "precio": 780,
+        "imagen": "/src/assets/glamping.webp",
+        "descripcion": "Una experiencia de lujo en medio del bosque.",
+        "favorito": false,
+        "calificacion": 4.58
+    },
+    {
+        "id": 9,
+        "titulo": "Penthouse con terraza privada",
+        "ubicacion": "Polanco, Ciudad de México",
+        "precio": 1450,
+        "imagen": "/src/assets/polanco.jpg",
+        "descripcion": "Penthouse elegante con terraza y vista panorámica de la ciudad.",
+        "favorito": true,
+        "calificacion": 4.95
+    },
+    {
+        "id": 10,
+        "titulo": "Casa de adobe en el desierto",
+        "ubicacion": "Real de Catorce, San Luis Potosí",
+        "precio": 670,
+        "imagen": "/src/assets/catorce.jpg",
+        "descripcion": "Hospédate en una casa tradicional de adobe rodeada de paisajes áridos.",
+        "favorito": false,
+        "calificacion": 4.60
+    },
+    {
+        "id": 11,
+        "titulo": "Villa tropical con alberca",
+        "ubicacion": "Tulum, Quintana Roo",
+        "precio": 1600,
+        "imagen": "/src/assets/tulum.jpg",
+        "descripcion": "Villa privada con alberca y diseño bohemio a minutos de la playa.",
+        "favorito": true,
+        "calificacion": 4.89
+    },
+    {
+        "id": 12,
+        "titulo": "Departamento artístico",
+        "ubicacion": "Centro, Oaxaca de Juárez",
+        "precio": 820,
+        "imagen": "/src/assets/oaxaca.jpg",
+        "descripcion": "Espacio lleno de color y arte local, ideal para creativos.",
+        "favorito": false,
+        "calificacion": 4.68
+    }
+]
